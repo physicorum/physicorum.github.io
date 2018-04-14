@@ -98,7 +98,7 @@ $('#registrationForm').on('submit', function(e){
 </script>
 -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -120,7 +120,7 @@ $('#registrationForm').on('submit', function(e){
         
         <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
             <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Melde Dich jetzt an</h3>
-            <form action="https://getsimpleform.com/messages?form_api_token=f7ba2a3c4d3692576b697b2020499f59" method="post" on-submit="$('#exampleModal').modal('show');" id='registrationForm'>
+            <form action="https://getsimpleform.com/messages?form_api_token=f7ba2a3c4d3692576b697b2020499f59" method="post" onsubmit="jQuery.noConflict(); jQuery('#successModal').modal('show');" id='registrationForm'>
                 <div class="form-field">
                     <input name="name" type="text" placeholder="Name" required>
                 </div>
@@ -175,7 +175,7 @@ $('#registrationForm').on('submit', function(e){
 
 <!-- Start 3 columns -->
 <div class="three-shade-col">
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
         <h3>Kontakt zu uns</h3>
         <ul>
@@ -184,7 +184,7 @@ $('#registrationForm').on('submit', function(e){
             <li><strong>Email:</strong> kontakt@physicorum.de</li>
         </ul>
     </div>
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <svg class="icon icon-clock-o"><use xlink:href="#icon-clock-o"></use></svg>
         <h3>Unsere Termine</h3>
 	<p>Der Kurs findet dreimal mit gleichem Inhalt statt.
@@ -192,21 +192,21 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
         <table>
             <tbody>
                 <tr>
-                    <td>Samstag 21.04. / Sonntag 22.04.</td>
-                    <td>jeweils 9:00 - 18:00</td>
-                </tr>
-                <tr>
-                    <td>Samstag 28.04. / Sonntag 29.04.</td>
+                    <td>Sa 21.04. / So 22.04.</td>
                     <td>9:00 - 18:00</td>
                 </tr>
                 <tr>
-                    <td>Samstag 05.05. / Sonntag 06.05.</td>
+                    <td>Sa 28.04. / So 29.04.</td>
+                    <td>9:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>Sa 05.05. / So 06.05.</td>
                     <td>9:00 - 18:00</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg>
         <h3>Location</h3>
             <p>
@@ -574,7 +574,7 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
 <!-- Start 3 columns -->
 <div class="three-shade-col">
     <div class="col-sm-4">
-        <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
+        <svg class="icon icon-ambulance"><use xlink:href="#icon-ambulance"></use></svg>
         <h3>Mit dem Auto</h3>
 	<p class='text-justify'>Wegen der knappen Parkmöglichkeiten in der Nähe des Veranstaltungsortes empfehlen wir Euch das Parken in der Brückenstraße in Neuenheim. Das ist an Samstagen und Sonntagen kostenlos möglich. Von dort sind es zwischen 10 und 15 Minuten zu Fuß.</p> 
     </div>
@@ -627,7 +627,7 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl44ORCK7bctBQcQhvpMHQvQWNl5ph55Q&sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOW-n_wtDU4hhheN1aXKH3bdHzrXpRhjE&sensor=false"></script>
     <script src="/js/all.min.js"></script>
 </body>
 </html>
