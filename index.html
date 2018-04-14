@@ -89,12 +89,14 @@
 <!-- End Header -->
 
  
-        <script>
+        <!--
+<script>
 $('#registrationForm').on('submit', function(e){
   $('#exampleModal').modal('show');
   e.preventDefault();
 });
 </script>
+-->
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -337,17 +339,17 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
             
                 <div class="col-sm-6 col-md-4">
                     <div class="icon-box">
-                        <svg class="icon icon-bed"><use xlink:href="#icon-bed"></use></svg>
-                        <h4>Entspannt durch die Klausur</h4>
-                        <p>Wir können natürlich nicht überall Abhilfe schaffen, die Klausur wird aber kein Problem.</p>
+                        <svg class="icon icon-diamond"><use xlink:href="#icon-diamond"></use></svg>
+                        <h4>Mittagssnack auf uns</h4>
+                        <p>Pausen sind wichtig. Damit wir schnell wieder bei der Sache sind, stellen wir etwas zur Stärkung.</p>
                     </div>
                 </div>
             
                 <div class="col-sm-6 col-md-4">
                     <div class="icon-box">
-                        <svg class="icon icon-diamond"><use xlink:href="#icon-diamond"></use></svg>
-                        <h4>Mittagssnack auf uns</h4>
-                        <p>Pausen sind wichtig. Damit wir schnell wieder bei der Sache sind, stellen wir etwas zu essen.</p>
+                        <svg class="icon icon-bed"><use xlink:href="#icon-bed"></use></svg>
+                        <h4>Entspannt durch die Klausur</h4>
+                        <p>Wir können natürlich nicht überall Abhilfe schaffen, die Klausur wird aber kein Problem.</p>
                     </div>
                 </div>
             
@@ -360,6 +362,8 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
 <div id="team" class="team"> 
     <h2 class="section-title">Unser Team</h2> 
     <div id="team-carousel">
+	<div class="col-lg-3 col-md-3 hidden-sm hidden-xs">&nbsp;</div>
+
     
         <div class="expandable-box">
             <div class="expandable-box-top">
