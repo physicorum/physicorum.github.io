@@ -89,7 +89,13 @@
 <!-- End Header -->
 
  
-        <!--
+        <script>
+$('#registrationForm').on('submit', function(e){
+  $('#exampleModal').modal('show');
+  e.preventDefault();
+});
+</script>
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -102,7 +108,6 @@
     </div>
   </div>
 </div>
--->
 
 <!-- Start Hero -->
 <div class="hero" style="background: url('/img/hero.jpg') no-repeat; background-size: cover;">
@@ -113,7 +118,7 @@
         
         <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
             <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Melde Dich jetzt an</h3>
-            <form action="https://getsimpleform.com/messages?form_api_token=f7ba2a3c4d3692576b697b2020499f59" method="post">
+            <form action="https://getsimpleform.com/messages?form_api_token=f7ba2a3c4d3692576b697b2020499f59" method="post" on-submit="$('#exampleModal').modal('show');" id='registrationForm'>
                 <div class="form-field">
                     <input name="name" type="text" placeholder="Name" required>
                 </div>
@@ -139,15 +144,15 @@
    		    05.05. / 06.05
   		  </label>
 		-->
-		<label>Wähle aus den unten stehenden Terminen mindestens einen aus, an dem du den Kurs besuchen willst. Der Kurs findet dreimal mit gleichem Inhalt statt, du kannst dich immernoch entscheiden wann genau du ihn besuchen willst.</label>
+		<label>Der Kurs findet dreimal mit gleichem Inhalt statt, du kannst dich immernoch entscheiden wann genau du ihn besuchen willst.</label>
 		<div class="checkbox">
-  		  <label><input type="checkbox" name="21.04." value="">Sa 21.04 / So 22.04.</label>
+  		  <label><input type="checkbox" name="21.04." value="">Sa 21.04. / So 22.04.</label>
 		</div>
 		<div class="checkbox">
 		  <label><input type="checkbox" name="28.04." value="">Sa 28.04. / So 29.04.</label>
 		</div>
 		<div class="checkbox">
-		  <label><input type="checkbox" name="05.05" value="">Sa 05.05. / So 06.05.</label>
+		  <label><input type="checkbox" name="05.05." value="">Sa 05.05. / So 06.05.</label>
 		</div>
 		<!--
                 <div class="form-field">
@@ -158,7 +163,7 @@
 			</select>
                 </div>
 		-->
-                <input type="submit" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" value="Anmelden - 190€ Kursgebühr">
+                <input type="submit" class="btn btn-default" value="Anmelden - 190€ Kursgebühr">
             </form>
         </div>
 
@@ -181,7 +186,7 @@
         <svg class="icon icon-clock-o"><use xlink:href="#icon-clock-o"></use></svg>
         <h3>Unsere Termine</h3>
 	<p>Der Kurs findet dreimal mit gleichem Inhalt statt.
-Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden kannst, wann es für dich am besten passt. Die Termine sind: </p>
+Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entscheiden kannst, wann es für dich am besten passt.</p>
         <table>
             <tbody>
                 <tr>
@@ -189,7 +194,7 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
                     <td>jeweils 9:00 - 18:00</td>
                 </tr>
                 <tr>
-                    <td>Samstag 28.04. / Sonntag 29.04</td>
+                    <td>Samstag 28.04. / Sonntag 29.04.</td>
                     <td>9:00 - 18:00</td>
                 </tr>
                 <tr>
@@ -238,7 +243,7 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
 
 <p>Wir arbeiteten beide mehrere Jahre als Tutoren an der Uni und sahen die Mühe der Studenten an den Physikaufgaben. Dabei kann eine einmal erlernte einfache Methodik viel Arbeit ersparen! Daher gründeten wir im Frühjahr 2016 „Physicorum“. </p>
 
-<p>In diesem Kurs wollen wir Euch das nötige Verständnis beibringen, um die Klausur zu bestehen! Dazu bieten wir viele Übungsaufgaben, die sich durch unseren Kurs gezielt und ohne Panik lösen lassen. So legen wir Euch das Werkzeug in die Hand, um souverän durch die Arbeit zu kommen! Zusätzlich bekommt Ihr das Physikwissen, das euch bei Eurem späteren Werdegang als Mediziner von Nutzen sein wird.
+<p>In diesem Kurs wollen wir Euch das nötige Verständnis beibringen, um die Klausur zu bestehen! Dazu bieten wir viele Übungsaufgaben, die sich durch unseren Kurs gezielt und ohne Panik lösen lassen. So legen wir Euch das Werkzeug in die Hand, um souverän durch die Arbeit zu kommen! Zusätzlich bekommt Ihr das Physikwissen, das Euch bei Eurem späteren Werdegang als Mediziner von Nutzen sein wird.
 </p>
 
 <p>Wir haben für Euch nochmal das ganze Angebot aufgelistet...</p>
@@ -288,13 +293,13 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
     <div class="container-fluid">
         <h2 class="section-title">Unsere Leistungen</h2>
 
-        <div class="row">
+        <div class="row text-center">
             
                 <div class="col-sm-6 col-md-4">
                     <div class="icon-box">
                         <svg class="icon icon-user-md"><use xlink:href="#icon-user-md"></use></svg>
                         <h4>Bestehensgarantie</h4>
-                        <p>Zusammen kommen wir durch die Klausur. Hast du Zweifel? Wir nicht, denn wir stehen mit dem vollen Beitrag dafür ein: Entweder im ersten Durchgang bestanden oder Geld zurück.</p>
+                        <p>Zusammen kommen wir durch die Klausur. Hast Du Zweifel? Wir nicht, denn wir stehen mit dem vollen Beitrag dafür ein: Entweder im ersten Durchgang bestanden oder Geld zurück.</p>
                     </div>
                 </div>
             
@@ -302,7 +307,7 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
                     <div class="icon-box">
                         <svg class="icon icon-briefcase"><use xlink:href="#icon-briefcase"></use></svg>
                         <h4>Viele Übungen</h4>
-                        <p>Übung macht den Meister, das gilt auch hier. Darum geben wir statt trockener Theorie zahlreiche Beispiele.</p>
+                        <p>Übung macht den Meister; das gilt auch hier. Darum geben wir statt trockener Theorie zahlreiche Beispiele.</p>
                     </div>
                 </div>
             
@@ -310,7 +315,7 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
                     <div class="icon-box">
                         <svg class="icon icon-bolt"><use xlink:href="#icon-bolt"></use></svg>
                         <h4>Sofortige Rückmeldung</h4>
-                        <p>Wer mag es schon lang auf seine Ergebnisse zu warten? Richtig, niemand. Wir rechnen, analysieren und Besprechen die Übungsaufgaben im Kurs, noch am gleichen Tag.</p>
+                        <p>Wer mag es schon, lang auf seine Ergebnisse zu warten? Richtig, niemand. Wir rechnen, analysieren und besprechen die Übungsaufgaben im Kurs - noch am gleichen Tag.</p>
                     </div>
                 </div>
             
@@ -318,7 +323,7 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
                     <div class="icon-box">
                         <svg class="icon icon-leaf"><use xlink:href="#icon-leaf"></use></svg>
                         <h4>Einfache Methoden</h4>
-                        <p>Man muss die Dinge so einfach machen wie es geht aber nicht einfacher.</p>
+                        <p>Man muss die Dinge so einfach machen wie es geht, aber nicht einfacher.</p>
                     </div>
                 </div>
             
@@ -326,7 +331,7 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
                     <div class="icon-box">
                         <svg class="icon icon-flask"><use xlink:href="#icon-flask"></use></svg>
                         <h4>Systematisches Vorgehen</h4>
-                        <p>Raten gibt es mit uns nicht. Wir geben Euch alle Werkzeuge in die Hand dass ihr wisst was der nächste Schritt ist - bis zum Ergebnis.</p>
+                        <p>Raten gibt es mit uns nicht. Wir geben Euch alle Werkzeuge in die Hand, dass Ihr wisst was der nächste Schritt ist - bis zum Ergebnis.</p>
                     </div>
                 </div>
             
@@ -341,8 +346,8 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
                 <div class="col-sm-6 col-md-4">
                     <div class="icon-box">
                         <svg class="icon icon-diamond"><use xlink:href="#icon-diamond"></use></svg>
-                        <h4>Mittagsessen auf uns</h4>
-                        <p>Pausen sind wichtig. Damit wir schnell wieder bei der Sache ist stellen wir eine Mahlzeit.</p>
+                        <h4>Mittagssnack auf uns</h4>
+                        <p>Pausen sind wichtig. Damit wir schnell wieder bei der Sache sind, stellen wir etwas zu essen.</p>
                     </div>
                 </div>
             
@@ -392,17 +397,19 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
 <!-- Start About -->
 <div id="why" class="about">
     <div class="container-fluid">
-        <h2 class="section-title">Wann ist unser Kurs sinnvoll für dich?</h2>
+        <h2 class="section-title">Wann ist unser Kurs sinnvoll für Dich?</h2>
 
         <div class="row">
             <div class="col-sm-6">
                 <h3>Der Kurs ist sinnvoll, wenn ...</h3>
 
-		<p>Dir auf die Vorlesung zugeschnittener Inhalt wichtig ist.</p>
+		<ul>
+		<li>Dir auf die Vorlesung zugeschnittene Vorbereitung wichtig ist.</li>
 
-		<p>Du Wert auf Betreuung durch Lehrer mit Erfahrung als Tutoren in Heidelberg legst.</p>
+		<li>Du Wert auf Betreuung durch Lehrer mit Erfahrung als Tutoren in Heidelberg legst.</li>
 
-		<p>Du lieber ein intensives Wochenende zur Klausurvorbereitung willst als mehrere Stunden über Wochen verteilt.</p>
+		<li>Ein intensives Wochenende zur Klausurvorbereitung besser in Deine Planung passt als mehrere Stunden über Wochen verteilt.</li>
+		</ul>
 
 		<div class="hidden-lg hidden-md hidden-sm">&nbsp;</div>
 	    </div>
@@ -410,9 +417,11 @@ Wir bieten Dir drei mögliche Wochenenden zur Auswahl an, sodass Du entscheiden 
 	    <div class="col-sm-6">
                 <h3>Der Kurs ist nicht sinnvoll, wenn ...</h3>
 		
-		<p>Du dich bereits sicher fühlst in deinem Wissen und Kenntnissen.</p>
+		<ul>
+		<li>Du Dich bereits sicher fühlst in deinem Wissen und Kenntnissen.</li>
 
-		<p>Du Nachhilfe erhälst bei einem Lehrer, dem du vertraust.</p>
+		<li>Du bereits Nachhilfe bei einem Lehrer Deines Vertrauens erhälst.</li>
+		</ul>
 
 	    </div>
      	</div>
