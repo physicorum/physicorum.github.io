@@ -98,6 +98,7 @@ $('#registrationForm').on('submit', function(e){
 </script>
 -->
 
+<!--
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -110,6 +111,15 @@ $('#registrationForm').on('submit', function(e){
     </div>
   </div>
 </div>
+-->
+
+<script type="text/javascript">
+  window.onload = (function(){
+      if(window.location.hash == '#success'){
+      document.getElementById('thank-you-message').className = 'none';
+      }
+      })
+</script>
 
 <!-- Start Hero -->
 <div class="hero" style="background: url('/img/hero.jpg') no-repeat; background-size: cover;">
@@ -120,7 +130,8 @@ $('#registrationForm').on('submit', function(e){
         
         <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
             <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Melde Dich jetzt an</h3>
-            <form action="https://getsimpleform.com/messages?form_api_token=f7ba2a3c4d3692576b697b2020499f59" method="post" onsubmit="jQuery.noConflict(); jQuery('#successModal').modal('show');" id='registrationForm'>
+            <form action="https://getsimpleform.com/messages?form_api_token=f7ba2a3c4d3692576b697b2020499f59" method="post"  id='registrationForm'>
+		<input type='hidden' name='redirect_to' value='http://physicorum.de#success' />
                 <div class="form-field">
                     <input name="name" type="text" placeholder="Name" required>
                 </div>
@@ -146,7 +157,7 @@ $('#registrationForm').on('submit', function(e){
    		    05.05. / 06.05
   		  </label>
 		-->
-		<label>Der Kurs findet dreimal mit gleichem Inhalt statt, du kannst dich immernoch entscheiden wann genau du ihn besuchen willst.</label>
+		<label>Der Kurs findet dreimal mit gleichem Inhalt statt, Du kannst dich immernoch entscheiden wann genau du ihn besuchen willst.</label>
 		<div class="checkbox">
   		  <label><input type="checkbox" name="21.04." value="">Sa 21.04. / So 22.04.</label>
 		</div>
@@ -166,6 +177,9 @@ $('#registrationForm').on('submit', function(e){
                 </div>
 		-->
                 <input type="submit" class="btn btn-default" value="Anmelden - 190€ Kursgebühr">
+		<p id='thank-you-message' class='hidden' style='color:green;'>
+		  Vielen Dank für Deine Anmeldung, wir melden uns bei dir!
+		</p>
             </form>
         </div>
 
@@ -569,7 +583,7 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
 
 <h2 class="section-title">Anfahrt</h2>
 
-<div id="location" class="map" data-center="[51.501904, -0.115871]" data-zoom="15" data-address="Neuenheimer Landstraße 16, 69120 Heidelberg" data-address-details="<img src='svg/min/logo.svg'>"></div>
+<div id="location" class="map" data-key='AIzaSyCOW-n_wtDU4hhheN1aXKH3bdHzrXpRhjE' data-zoom="15" data-address="Neuenheimer Landstraße 16, 69120 Heidelberg" data-address-details="<img src='svg/min/logo.svg'>"></div>
 
 <!-- Start 3 columns -->
 <div class="three-shade-col">
@@ -627,7 +641,7 @@ Wir bieten Dir folgende mögliche Wochenenden zur Auswahl an, sodass Du entschei
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOW-n_wtDU4hhheN1aXKH3bdHzrXpRhjE&sensor=false"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="/js/all.min.js"></script>
 </body>
 </html>
